@@ -51,8 +51,12 @@
 
 .Reservar {
   background-color: var(--azul-oscuro);
-  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8vh;
   width: 20vw;
-  font-size: 16px;
+  font-size: 18px;
   color: var(--blanco);
+  text-decoration: none;
 }
