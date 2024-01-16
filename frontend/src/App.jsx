@@ -1,15 +1,16 @@
 import "./App.css";
-import { Catalogo } from "./components/Catalogo/Catalogo";
-import { Footer } from "./components/Footer/Footer";
-import { Header } from "./components/Header/Header";
+import Reservas from './components/Reservas/Reservas';
+import { Homepage } from './components/Homepage/Homepage';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <>
-      <Header />
-      <Catalogo />
-      <Footer />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Homepage/>} />
+        <Route path="/reservar" element={<Reservas/>} />
+      </Routes>
+    </Router>
   );
 }
 
