@@ -1,0 +1,26 @@
+.fondoHeader {
+  background-color: var(--azul-oscuro);
+  display: flex;
+  justify-content: center;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10vh;
+  width: 90vw;
+}
+
+.trooking {
+  font-size: 2em;
+  font-weight: bold;
+  color: var(--blanco);
+}
+
+.misReservas {
+  width: 15vw;
+  height: 4vh;
+  background-color: var(--blanco);
+  border: none;
+}
