@@ -22,7 +22,7 @@ export const Catalogo = () => {
             </div>
             <p className="masInfo">{hotel.description}</p>
             <section className="precio">
-              <p><b>{hotel.pricePerNight}</b></p>
+              <p><b>{hotel.pricePerNight} €</b></p>
               <p>1 noche, 2 adultos</p>
               <Link to="/reservas" className="Reservar">Reservar</Link>
             </section>
