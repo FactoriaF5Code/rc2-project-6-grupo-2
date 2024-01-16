@@ -1,14 +1,15 @@
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
-import ".Footer.css";
+import "./Footer.css";
 
 export const Footer = () => {
   return (
     <>
-    <div className="pagefoot">
-    <section className="enlaces">
-      <h3>Versión para móviles</h3>
-      <h3>Tus reservas</h3>
-      </section>
+      <div className="pagefoot">
+        <section className="enlaces">
+          <h3>Versión para móviles</h3>
+          <h3>Tus reservas</h3>
+        </section>
+
         <section className="socialNetwork">
           <a
             href="https://www.facebook.com/tupagina"
@@ -32,8 +33,7 @@ export const Footer = () => {
             <FaInstagram style={{ color: "#ffffff " }} />
           </a>
         </section>
-
-        <section>
+        <section className="año">
           <p>© 2024 Trooking</p>
         </section>
       </div>
