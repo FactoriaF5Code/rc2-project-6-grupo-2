@@ -1,3 +1,18 @@
-*{
-    background-color: black;
+:root {
+  --azul-claro: #a3bac3;
+  --azul-oscuro: #003b95;
+  --blanco: #eaebed;
 }
+
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  background-color:var(--azul-claro) ;
+}
+
