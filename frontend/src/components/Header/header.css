@@ -16,6 +16,7 @@ header {
   font-size: 2em;
   font-weight: bold;
   color: var(--blanco);
+  text-decoration: none;
 }
 
 .misReservas {
