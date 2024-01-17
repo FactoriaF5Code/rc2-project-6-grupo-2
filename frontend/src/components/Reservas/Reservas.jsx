@@ -22,8 +22,8 @@ function Reservas() {
         <img src={photoUrl} alt={name} />
         <p>Precio por noche: {pricePerNight} €</p>
         <Calendario />
+        
       </div>
-
       <Footer />
     </div>
   );
