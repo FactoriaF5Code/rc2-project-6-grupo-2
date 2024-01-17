@@ -1,14 +1,25 @@
-import { useParams } from 'react-router-dom';
+import { useParams } from "react-router-dom";
+import { useFetch } from "../../useFetch";
+import { Header } from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 function Reservas() {
   const { hotelId } = useParams();
+  const { data } = useFetch(`http://localhost:8080/api/hotels/${hotelId}`);
 
-  // Lógica para obtener la información del hotel con el hotelId y mostrarla en la página de reservas
+  if (!data) {
+    return <div>Cargando...</div>;
+  }
+  const { name, description, photoUrl, pricePerNight } = data;
 
   return (
     <div>
-      <h2>Reservas para el hotel con ID {hotelId}</h2>
-      {/* Mostrar información del hotel */}
+      <Header />
+      <h2>Reservas para el hotel {name}</h2>
+      <p>{description}</p>
+      <img src={photoUrl} alt="" />
+      <p>Precio por noche: {pricePerNight} €</p>
+      <Footer />
     </div>
   );
 }
