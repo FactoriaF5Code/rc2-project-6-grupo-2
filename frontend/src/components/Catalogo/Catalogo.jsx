@@ -1,6 +1,7 @@
 import { useFetch } from "../../useFetch";
 import "./Catalogo.css";
 import {Link} from 'react-router-dom';
+import Corazon from "./Corazon";
 
 export const Catalogo = () => {
   const { data } = useFetch("http://localhost:8080/api/hotels");
@@ -18,7 +19,7 @@ export const Catalogo = () => {
           <section className="hotel">
             <div className="descripcionHotel">
               <p>{hotel.name}</p>
-              <img src="../../../public/heart.svg"></img>
+              <Corazon />
             </div>
             <p className="masInfo">{hotel.description}</p>
             <section className="precio">
