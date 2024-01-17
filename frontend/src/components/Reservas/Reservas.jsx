@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useFetch } from "../../useFetch";
 import { Header } from "../Header/Header";
 import Footer from "../Footer/Footer";
@@ -28,7 +28,9 @@ function Reservas() {
           <p>
             <b> {pricePerNight} € </b>
           </p>
-          <button className="botonConfirmar"> Reservar</button>
+          <Link to="/">
+            <button className="botonConfirmar"> Reservar</button>
+          </Link>
         </div>
       </div>
       <Footer />
