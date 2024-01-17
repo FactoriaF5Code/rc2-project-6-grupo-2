@@ -8,7 +8,7 @@ export const Calendario = () => {
   return (
     <>
       <p> Fecha de entrada</p>
-      <DatePicker
+      <DatePicker className="fecha"
         selected={startDate}
         onChange={(date) => setStartDate(date)}
         selectsStart
@@ -16,7 +16,7 @@ export const Calendario = () => {
         endDate={endDate}
       />
       <p> Fecha de salida</p>
-      <DatePicker
+      <DatePicker className="fecha"
         selected={endDate}
         onChange={(date) => setEndDate(date)}
         selectsEnd

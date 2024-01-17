@@ -1,3 +1,53 @@
-.completatuReserva{
+.containerReservas {
+  background-color: var(--azul-claro);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: auto;
+  gap: 15px;
+}
+
+.completatuReserva {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 5vh;
+}
+
+.imagenReserva {
+  width: 30vw;
+  height: 40vh;
+  object-fit: cover;
+}
+.fecha {
+  width: 30vw;
+  height: 5vh;
+  border: none;
+  padding: 5px;
+}
+.contenedorCalendario {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 5vh;
+}
+.hacerReserva{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 31vw;
+    margin: 5vh auto;
+    gap: 15px;
+
+
+}
+.botonConfirmar{
+    background-color: var(--azul-oscuro);
+    color:var(--blanco);
+    border:none;
+    width: 12vw;
+    height: 7vh;
+    font-size:16px;
 
 }
