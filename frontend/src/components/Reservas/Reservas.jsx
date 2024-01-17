@@ -17,20 +17,22 @@ function Reservas() {
   return (
     <div>
       <Header />
-      <div className="containerReservas">
-        <p className="completatuReserva"> Completa tu reserva</p>
-        <p>{name}</p>
-        <img src={photoUrl} alt={name} className="imagenReserva" />
-        <div className="contenedorCalendario">
-          <Calendario />
-        </div>
-        <div className="hacerReserva">
-          <p>
-            <b> {pricePerNight} € </b>
-          </p>
-          <Link to="/">
-            <button className="botonConfirmar"> Reservar</button>
-          </Link>
+      <div className="paginaReservas">
+        <div className="containerReservas">
+          <p className="completatuReserva"> Completa tu reserva</p>
+          <p>{name}</p>
+          <img src={photoUrl} alt={name} className="imagenReserva" />
+          <div className="contenedorCalendario">
+            <Calendario />
+          </div>
+          <div className="hacerReserva">
+            <p>
+              <b> {pricePerNight} € </b>
+            </p>
+            <Link to="/">
+              <button className="botonConfirmar"> Reservar</button>
+            </Link>
+          </div>
         </div>
       </div>
       <Footer />
