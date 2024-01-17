@@ -1,15 +1,21 @@
+
 import "./App.css";
-import Home from "./components/Home";
-import Reservas from './components/Reservas/Reservas';
+import Reservas from "./components/Reservas/Reservas";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Catalogo } from "./components/Catalogo/Catalogo";
+import { ReservationProvider } from "./components/MisReservas/ReservationContext";
+import ConfirmacionReversa from "./components/MisReservas/MisReservas";
 
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/reservas/:hotelId" element={<Reservas />} />
-      </Routes>
+      <ReservationProvider>
+        <Routes>
+          <Route path="/" element={<Catalogo />} />
+          <Route path="/misreservas" element={<ConfirmacionReversa />} />
+          <Route path="/reservas/:hotelId" element={<Reservas />} />
+        </Routes>
+      </ReservationProvider>
     </Router>
   );
 }

@@ -1,6 +1,6 @@
 .paginaReservas {
     background-color: var(--azul-claro);
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
