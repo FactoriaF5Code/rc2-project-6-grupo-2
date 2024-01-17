@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useFetch } from "../../useFetch";
 import { Header } from "../Header/Header";
 import Footer from "../Footer/Footer";
+import { Calendario } from "./Calendario";
 
 function Reservas() {
   const { hotelId } = useParams();
@@ -10,15 +11,19 @@ function Reservas() {
   if (!data) {
     return <div>Cargando...</div>;
   }
-  const { name, description, photoUrl, pricePerNight } = data;
+  const { name, photoUrl, pricePerNight } = data;
 
   return (
     <div>
       <Header />
-      <h2>Reservas para el hotel {name}</h2>
-      <p>{description}</p>
-      <img src={photoUrl} alt="" />
-      <p>Precio por noche: {pricePerNight} €</p>
+      <div>
+        <p className="completatuReserva"> Completa tu reserva</p>
+        <h2>{name}</h2>
+        <img src={photoUrl} alt={name} />
+        <p>Precio por noche: {pricePerNight} €</p>
+        <Calendario />
+      </div>
+
       <Footer />
     </div>
   );
