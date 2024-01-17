@@ -1,0 +1,19 @@
+.reservation-message {
+  font-size: 16px;
+  background-color: var(--blanco);
+  width: 80vw;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #ffb700;
+
+}
+
+.contenedormisReservas {
+  background-color: var(--azul-claro);
+  min-height: 100vh;
+  padding:5vh;
+  display: flex;
+  justify-content: center;
+}
