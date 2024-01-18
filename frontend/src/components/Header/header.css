@@ -28,7 +28,7 @@ header {
   cursor: pointer;
 }
 
-@media (max-width:390px) {
+@media (max-width:430px) {
   .misReservas {
     width: 30vw;
   }
