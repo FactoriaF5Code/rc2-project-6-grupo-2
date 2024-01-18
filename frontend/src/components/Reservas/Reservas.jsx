@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useFetch } from "../../useFetch";
 import { Header } from "../Header/Header";
 import Footer from "../Footer/Footer";
-import { Calendario } from "./Calendario";
+import Calendario  from "./Calendario.jsx";
 import { useReservation } from "../MisReservas/ReservationContext";
 import "./Reservas.css";
 

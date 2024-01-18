@@ -11,7 +11,9 @@ export const Header = () => {
           </Link>
         </div>
         <div>
+          <Link to="/misreservas">
           <button className="misReservas"> Mis Reservas </button>
+          </Link>
         </div>
       </header>
     </div>
