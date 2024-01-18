@@ -1,4 +1,3 @@
-// MisReservas.jsx
 import { useReservation } from "./ReservationContext";
 import { Header } from "../Header/Header";
 import Footer from "../Footer/Footer";
@@ -18,6 +17,7 @@ function ConfirmacionReversa() {
               <b>{`${reservationInfo.startDate.toDateString()}`}</b> {`hasta`}{" "}
               <b>{`${reservationInfo.endDate.toDateString()}`}</b>
             </p>
+            <img src={reservationInfo.photoUrl} alt={reservationInfo.hotelName} />
           </div>
         )}
       </main>

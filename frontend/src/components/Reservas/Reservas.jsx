@@ -27,6 +27,7 @@ function Reservas() {
       hotelName: name,
       startDate,
       endDate,
+      photoUrl,
     });
     navigate(`/misreservas`);
   };
