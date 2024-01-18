@@ -60,6 +60,36 @@
   color: var(--blanco);
   text-decoration: none;
 }
-.hotel-link{
+.hotel-link {
   text-decoration: none;
 }
+
+@media (max-width: 390px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    gap:3vh;
+    width: 70vw;
+  }
+  .fotoHotel{
+    width: 70vw;
+    height:30vh ;
+
+  }
+
+  .descripcionHotel{
+    font-size:25px;
+
+  }
+
+  .masInfo{
+    font-size:18px;
+    text-align: justify;
+
+  }
+
+  .Reservar{
+    width: 70vw;
+  }
+}
+

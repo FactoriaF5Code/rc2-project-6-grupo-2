@@ -27,3 +27,9 @@ header {
   font-size: 1em;
   cursor: pointer;
 }
+
+@media (max-width:390px) {
+  .misReservas {
+    width: 30vw;
+  }
+}
