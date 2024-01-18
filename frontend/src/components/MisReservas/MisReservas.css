@@ -7,13 +7,52 @@
   justify-content: center;
   align-items: center;
   border: 5px solid #ffb700;
-
 }
 
 .contenedormisReservas {
   background-color: var(--azul-claro);
   min-height: 100vh;
-  padding:5vh;
+  padding: 5vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fichaReserva {
+  background-color: var(--blanco);
+  width: 70vw;
+  padding: 3vw;
+  margin-top: 5vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fotoFicha {
+  width: 30vw;
+}
+
+.fichaHotel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.descripcionFicha {
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+}
+
+.botonVerde {
+  background-color: #23cf07;
+  color: var(--blanco);
+  border: none;
+  width: 13vw;
+  height: 6vh;
+  font-size: 20px;
+}
+
+.derecha {
+  display: flex;
+  justify-content: flex-end;
 }

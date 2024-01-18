@@ -20,7 +20,7 @@ function Reservas() {
     return <div>Cargando...</div>;
   }
 
-  const { name, photoUrl } = data;
+  const { name, photoUrl, description } = data;
 
   const handleReserve = () => {
     setReservation({
@@ -28,6 +28,7 @@ function Reservas() {
       startDate,
       endDate,
       photoUrl,
+      description,
     });
     navigate(`/misreservas`);
   };
