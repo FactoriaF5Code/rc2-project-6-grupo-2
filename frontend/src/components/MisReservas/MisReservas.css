@@ -58,3 +58,7 @@
   display: flex;
   justify-content: flex-end;
 }
+
+.masinfoFicha {
+  font-size: 20px;
+}
