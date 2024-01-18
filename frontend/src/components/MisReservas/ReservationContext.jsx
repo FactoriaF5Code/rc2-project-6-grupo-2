@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState } from 'react';
 
 const ReservationContext = createContext();
 
@@ -10,12 +10,17 @@ export const useReservation = () => {
 export const ReservationProvider = ({ children }) => {
   const [reservationInfo, setReservationInfo] = useState(null);
 
-  const setReservation = (info) => {
-    setReservationInfo(info);
+  const setReservation = (data) => {
+    setReservationInfo(data);
+  };
+
+  const values = {
+    reservationInfo,
+    setReservation,
   };
 
   return (
-    <ReservationContext.Provider value={{ reservationInfo, setReservation }}>
+    <ReservationContext.Provider value={values}>
       {children}
     </ReservationContext.Provider>
   );

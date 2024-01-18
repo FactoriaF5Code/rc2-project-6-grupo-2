@@ -1,10 +1,11 @@
+import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useFetch } from "../../useFetch";
 import { Header } from "../Header/Header";
 import Footer from "../Footer/Footer";
 import { Calendario } from "./Calendario";
-import "./Reservas.css";
 import { useReservation } from "../MisReservas/ReservationContext";
+import "./Reservas.css";
 
 function Reservas() {
   const { hotelId } = useParams();
@@ -12,14 +13,21 @@ function Reservas() {
   const { setReservation } = useReservation();
   const navigate = useNavigate();
 
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
+
   if (!data) {
     return <div>Cargando...</div>;
   }
 
-  const { name, photoUrl, pricePerNight } = data;
+  const { name, photoUrl } = data;
 
   const handleReserve = () => {
-    setReservation({ hotelName: name, price: pricePerNight });
+    setReservation({
+      hotelName: name,
+      startDate,
+      endDate,
+    });
     navigate(`/misreservas`);
   };
 
@@ -32,12 +40,14 @@ function Reservas() {
           <p>{name}</p>
           <img src={photoUrl} alt={name} className="imagenReserva" />
           <div className="contenedorCalendario">
-            <Calendario />
+            <Calendario
+              startDate={startDate}
+              setStartDate={setStartDate}
+              endDate={endDate}
+              setEndDate={setEndDate}
+            />
           </div>
           <div className="hacerReserva">
-            <p>
-              <b> {pricePerNight} € </b>
-            </p>
             <button className="botonConfirmar" onClick={handleReserve}>
               Reservar
             </button>
