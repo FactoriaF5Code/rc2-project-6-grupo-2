@@ -1,10 +1,10 @@
 .paginaReservas {
-    background-color: var(--azul-claro);
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+  background-color: var(--azul-claro);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 .containerReservas {
   background-color: var(--blanco);
@@ -58,4 +58,34 @@
   height: 7vh;
   font-size: 16px;
   cursor: pointer;
+}
+
+@media (max-width: 430px) {
+  .containerReservas {
+    width: 90vw;
+    
+  }
+
+  .completatuReserva {
+    font-size: 24px;
+  }
+  .imagenReserva {
+    width: 70vw;
+    height: 30vh;
+  }
+
+  .contenedorCalendario {
+    width: 70vw;
+    margin-top:3vh;
+  }
+  .fecha {
+    width: 95%;
+  }
+  .hacerReserva{
+    width: 70vw;
+    margin-top:3vh;
+  }
+  .botonConfirmar {
+    width: 70vw;
+  }
 }
