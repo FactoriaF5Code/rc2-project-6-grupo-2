@@ -4,6 +4,17 @@
   flex-direction: column;
   align-items: center;
   padding-bottom: 5vh;
+  min-height: 75vh;
+}
+
+.buscador {
+  margin-top: 5vh;
+  width: 58vw;
+  height: 4vh;
+  padding: 5px 15px;
+  font-size: 16px;
+  background-color: var(--blanco);
+  border: 5px solid #ffb700;
 }
 
 .fotoHotel {
@@ -68,28 +79,24 @@
   .container {
     flex-direction: column;
     height: auto;
-    gap:3vh;
+    gap: 3vh;
     width: 70vw;
   }
-  .fotoHotel{
+  .fotoHotel {
     width: 70vw;
-    height:30vh ;
-
+    height: 30vh;
   }
 
-  .descripcionHotel{
-    font-size:25px;
-
+  .descripcionHotel {
+    font-size: 25px;
   }
 
-  .masInfo{
-    font-size:18px;
+  .masInfo {
+    font-size: 18px;
     text-align: justify;
-
   }
 
-  .Reservar{
+  .Reservar {
     width: 70vw;
   }
 }
-

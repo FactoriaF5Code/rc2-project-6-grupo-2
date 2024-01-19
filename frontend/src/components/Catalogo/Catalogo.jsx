@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Corazon from "./Corazon";
 import { useFetch } from "../../useFetch";
 import "./Catalogo.css";
@@ -7,12 +8,24 @@ import Footer from "../Footer/Footer";
 
 export const Catalogo = () => {
   const { data } = useFetch("http://localhost:8080/api/hotels");
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const filteredData = data?.filter((hotel) =>
+    hotel.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <>
       <Header />
       <div className="fondoBody">
-        {data?.map((hotel) => (
+        <input
+          className="buscador"
+          type="text"
+          placeholder="Buscar hoteles"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+        {filteredData?.map((hotel) => (
           <div key={hotel.id}>
             <section className="container">
               <section>
